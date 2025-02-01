@@ -1,4 +1,4 @@
-import Persona
+from Persona import Persona
 
 
 class Pasajero(Persona):
@@ -56,6 +56,7 @@ class Pasajero(Persona):
         self._acompanante = acompanante
         Pasajero._pasajeroRegistrados.append(self)
 
+    # Metodos de Clase
     @staticmethod
     def getPasajerosRegistrados():
         return Pasajero._pasajeroRegistrados
@@ -63,3 +64,47 @@ class Pasajero(Persona):
     @staticmethod
     def getCantidadPasajeros():
         return len(Pasajero._pasajeroRegistrados)
+
+    @staticmethod
+    def buscarPasajeroPorId(id: int) -> object:
+        pass
+
+    @staticmethod
+    def buscarPasajeroPorNombre(nombre: str) -> object:
+        pass
+
+    # Metodo de Instacia
+    def mostrarDatos(self):
+        print(
+            f"Soy el pasajero {self.getNombre()} tengo {self.getEdad()} años y mi ID es {self.getId()}"
+        )
+
+    def eliminarPasaje(self) -> str:
+        pass
+
+    def solicitarReembolso(self):
+        pass
+
+    def registarAcompanante(self):
+        pass
+
+    def comprarTiquete(self):
+        pass
+
+    def aceptarCambio(self) -> bool:
+        pass
+
+    def pedirFactura(self):
+        pass
+
+    def agregarMaleta(self):
+        pass
+
+    def validarDestino(self):
+        pass
+
+    def validarHora(self):
+        pass
+
+    def proveerInformacion(self):
+        pass

@@ -45,13 +45,22 @@ class Asiento:
     def setIntegridad(self, integridad: str):
         self._integridad = integridad
 
+    # Métodos de clase
     @classmethod
     def cantidadAsientos(cls) -> int:
         return len(cls._asientos)
 
+    @classmethod
     def getAsientos(cls) -> list:
         return cls._asientos
 
     @classmethod
     def agregarAsiento(cls, asiento: "Asiento"):
         cls._asientos.append(asiento)
+
+    # Métodos de Instancia
+    def danoAleatorio(self):
+        pass
+
+    def consultarDisponibilidad(self):
+        pass

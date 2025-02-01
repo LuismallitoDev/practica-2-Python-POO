@@ -9,7 +9,7 @@ class Persona(ABC):
 
     @abstractmethod
     def mostrarDatos(self) -> str:
-        pass
+            pass
 
     # Defieniendo getters y setters
     def getNombre(self):

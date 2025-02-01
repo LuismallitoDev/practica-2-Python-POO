@@ -68,3 +68,42 @@ class Bus:
 
     def setPesoMaximo(self, value: float):
         self._pesoMaximo = value
+
+    # Métodos de Clase
+    @classmethod
+    def anadirBus(cls):
+        pass
+
+    def cantidadBuses(cls) -> int:
+        return len(cls._buses)
+
+    def getBuses(cls):
+        return cls._buses
+
+    # Métodos de Instancia
+    def isDisponbile(self):
+        pass
+
+    def anadirRutaFutura(self) -> bool:
+        pass
+
+    def quitarRutaFutura(self) -> bool:
+        pass
+
+    def asignarPasajero(self) -> str:
+        pass
+
+    def eliminarPasajero(self) -> str:
+        pass
+
+    def reparar(self):
+        pass
+
+    def verificarIntegridad(self):
+        pass
+
+    def calcularConsumoCombustible(self):
+        pass
+
+    def danoAleatorio(self) -> float:
+        pass
