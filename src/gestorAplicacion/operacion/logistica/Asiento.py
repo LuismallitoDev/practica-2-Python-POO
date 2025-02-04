@@ -1,3 +1,6 @@
+import random as random
+
+
 class Asiento:
     _asientos = []
 
@@ -6,7 +9,7 @@ class Asiento:
         bus: object = None,
         estado: bool = True,
         usuario: object = None,
-        integridad: str = "",
+        integridad: str = "Perfecto Estado",
     ):
         self._idAsiento = Asiento.cantidadAsientos + 1
         self._bus = bus
@@ -59,8 +62,19 @@ class Asiento:
         cls._asientos.append(asiento)
 
     # Métodos de Instancia
-    def danoAleatorio(self):
-        pass
+    def danoAleatorio(self) -> str:
+        danos = [
+            "Desgaste",
+            "Roto",
+            "Rasgado",
+            "Manchado",
+            "Hundido",
+            "Mecanismo Reclinable Dañado",
+        ]
+        return random.choice(danos)
 
     def consultarDisponibilidad(self):
-        pass
+        if self._estado:
+            return "Asiento Disponible"
+        else:
+            return "Asiento Ocupado"
